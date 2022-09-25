@@ -15,10 +15,6 @@
             background-color: #1b1c1e;
             font-family: 'Josefin Sans', sans-serif;
             font-family: 'Ubuntu', sans-serif;
-            /* background-image: url(ironman.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%; */
         }
 
         header {
@@ -27,60 +23,69 @@
         }
 
         .navbar {
+            display: flex;
+            justify-content: space-between;
             background-color: #1b1c1e;
             border-bottom-right-radius: 40px;
             border-bottom-left-radius: 40px;
             border-bottom: 5px solid darkmagenta;
         }
 
-        .navbar ul {
-            overflow: auto;
+        .links {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
-        .navbar li {
-            float: right;
-            list-style: none;
-            margin: -8px 0px;
+        #icon {
+            width: 100px;
+            padding: 2px 4px;
+            margin: 2px 2px 2px 20px;
+            border-bottom: 2px solid black;
+            border-radius: 4px;
         }
 
-        .navbar li a {
+        #iconText {
+            color: white;
+            font-size: 30px;
+            margin: 2px 2px 2px 20px;
+            font-weight: bold;
+            text-shadow: 3px 3px 3px black;
+        }
+
+        .nav-links {
             text-decoration: none;
             color: lightgoldenrodyellow;
             padding: 9px 9px;
             margin: 6px;
             background-color: #aaff;
             border-radius: 20px;
-            text-shadow: 0px 0px 1px black;
+            width: 66px;
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
         }
 
-        .navbar li a:hover {
+        .nav-links:hover{
             border-radius: 20px;
             background-color: #da70d6;
             padding: 8px;
-            color: lightgoldenrodyellow;
             text-shadow: 0px 0px 1px black;
         }
 
-        #lightMode {
-            color: white;
+        .nav-links a {
+            text-decoration: none;
+            color: lightgoldenrodyellow;
+            text-shadow: 0px 0px 2px black;
         }
 
-        #lightMode:hover {
-            background-color: white;
-            color: black;
+        #lightmode-icon{
+            width: 50px;
         }
 
-        #icon {
-            width: 100px;
-            padding: 2px 4px;
-            margin: 0px -33px;
-        }
-
-        #iconText {
-            color: white;
-            font-size: 30px;
-            margin: 0px -30px;
-            font-weight: bold;
+        #light-mode{
+            background: none;
         }
 
         .updateStyleA {
@@ -102,15 +107,6 @@
             background-color: #1b1c1e;
             text-shadow: 0px 0px 4px black;
         }
-
-        /* .update3 {
-            border: 2px solid white;
-            border-radius: 85px;
-            color: black;
-            margin: 27px 1px;
-            padding: 70px 70px;
-            background-color: white;
-        } */
 
         .image {
             border-radius: 20%;
@@ -168,16 +164,18 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <img src="/download.png" alt="icon" id="icon"><br>
-                <span id="iconText">ARENA</span>
-                <li><a href="/index.html" id="lightMode">Go Light!</a></li>
-                <li><a href="https://twitter.com/SreeSen03?t=yhioag8qkw4XHt7BhhZJAg&s=09" target="_blank">Twitter</a>
-                </li>
-                <li><a href="/darkMode.html">Home</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <div id="icon-title">
+                <img src="/download.png" alt="icon" id="icon">
+                <p id="iconText">ARENA</p>
+            </div>
+
+            <div class="links">
+                <div class="nav-links"><a href="/darkMode.html">Home</a></div>
+                <div class="nav-links"><a href="/https://twitter.com/SreeSen03?t=yhioag8qkw4XHt7BhhZJAg&s=09" target="_blank">Twitter</a></div>
+                <div class="nav-links" id="light-mode"><a href="/index.html"><img src="/Screenshot_20220925-103707-068-removebg-preview.png" alt="lightmode icon" id="lightmode-icon"></a></div>
+            </div>
+        </div>
     </header>
     <div class="updateStyleA">
         <p class="new">New!</p>
