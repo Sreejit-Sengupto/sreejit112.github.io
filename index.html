@@ -34,7 +34,7 @@
         .links {
             display: flex;
             justify-content: space-evenly;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             align-items: center;
         }
 
@@ -80,10 +80,7 @@
 
         #darkmode-icon{
             width: 30px;
-        }
-
-        #dark-mode{
-            background: none;
+            margin: 0px 10px;
         }
 
         .updateStyleA {
@@ -170,7 +167,7 @@
             <div class="links">
                 <div class="nav-links"><a href="/index.html">Home</a></div>
                 <div class="nav-links"><a href="/https://twitter.com/SreeSen03?t=yhioag8qkw4XHt7BhhZJAg&s=09" target="_blank">Twitter</a></div>
-                <div class="nav-links" id="dark-mode"><a href="/darkMode.html"><img src="/darkmode-icon.png" alt="darkmode icon" id="darkmode-icon"></a></div>
+                <a href="/darkMode.html"><img src="/darkmode-icon.png" alt="darkmode icon" id="darkmode-icon"></a>
             </div>
         </div>
     </header>
